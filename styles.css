@@ -1,0 +1,215 @@
+/* Allgemeine Stile */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #000000;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 5;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Hintergrund-Ebene */
+    overflow: hidden;
+}
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Das Video füllt den gesamten Bereich */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+header {
+    color: #fff;
+    transform: translateY(-50);
+    background: rgba(2, 2, 2, 0.562);
+    padding: 10px 0;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    color: #fff;
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#hero {
+    text-align: center;
+    color: #000000;
+    padding: 200px 0;
+}
+
+#hero .btn {
+    background: #0066cc;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#hero .btn:hover {
+    background: #f2f3f4;
+    color: #1408ec;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+form button {
+    background: #0066cc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #005bb5;
+}
+
+footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.contact-info {
+    background-color: rgba(0, 0, 0, 0.7); /* Transparenter schwarzer Hintergrund */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #00ccff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.map {
+    margin-top: 20px;
+    border: 15px solid #00000068;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%; /* Breite entspricht der Anzahl der Bilder */
+}
+
+.carousel-images img {
+    width: 45%;
+    flex: 1 0 25%; /* Bilder nehmen 100% der Karussell-Breite ein */
+    border-radius: 5px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-75%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+#Mail {
+    background-color: rgba(0, 0, 0, 0.7); /* Transparenter schwarzer Hintergrund */
+   color: #f2f3f4;
+    right: 10px;
+    left: 10px;
+    border-radius: 10px;
+    width:100%;
+    top: 1.25;
+}
+
+#availability-calendar {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #121212b9;
+    border: 1px solid #f2000000;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(255, 12, 12, 0.1);
+}
+

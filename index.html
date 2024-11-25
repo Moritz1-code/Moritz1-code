@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DroneVision - Professionelle Fotos & Videos</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- FullCalendar CSS -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+<!-- FullCalendar JS -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="images/Hintergrundvideo.mp4" type="video/mp4">
+            Dein Browser unterstützt kein HTML5-Video.
+        </video>
+    </div>
+    <header>
+        <div class="container">
+        <div class="Überschrifft" ><h1>DroneVision</h1></div>
+            <nav>
+                <ul>
+                    <li><a href="#about">Über mich</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Leistungen</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <h2>Professionelle Drohnenfotos und Videos</h2>
+        <p>Faszinierende Perspektiven für atemberaubende Momente.</p>
+        <a href="#portfolio" class="btn">Entdecke mein Portfolio</a>
+
+    </section>
+
+    <section id="about" class="container">
+        <h2>Über mich</h2>
+        <p>
+            Hi, ich bin Fabien Rogge, ein kreativer Content Creator spezialisiert auf Drohnenfotografie 
+            und -videografie. Mit meiner Leidenschaft für außergewöhnliche Perspektiven helfe ich Marken und
+            Einzelpersonen, unvergessliche visuelle Inhalte zu erstellen.
+        </p>
+    </section>
+
+    <section id="portfolio" class="container">
+        <h2>Portfolio</h2>
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="images/DJI_0005.JPG">
+                <img src="images/DJI_0007.JPG">
+                <img src="images/DJI_0012.JPG">
+                <img src="images/DJI_0013.JPG">
+            </div>
+            <button class="carousel-control prev">&lt;</button>
+            <button class="carousel-control next">&gt;</button>
+        </div>
+    </section>
+    
+
+
+    <section id="services" class="container">
+        <h2>Leistungen</h2>
+        <ul>
+            <li>Drohnenfotografie von Landschaften, Events und Immobilien</li>
+            <li>Professionelle Videobearbeitung für Social Media</li>
+            <li>Beratung und Ideenentwicklung für visuelle Projekte</li>
+        </ul>
+    </section>
+
+    <section id="calendar" class="container">
+        <h2>Verfügbarkeitskalender</h2>
+        <p>Sehen Sie hier, wann ich für Termine verfügbar bin:</p>
+        <div id="availability-calendar"></div>
+    </section>
+
+    <!-- Kontaktbereich -->
+<section id="contact" class="container">
+    <h2>Kontakt</h2>
+    <div class="contact-info">
+        <p><strong>Name:</strong> Fabien Rogge</p>
+        <p><strong>Telefon:</strong> <a href="tel:015209240567">015209240567</a></p>
+        <p><strong>E-Mail:</strong> <a href="mailto:roggefabien@gmail.com">roggefabien@gmail.com</a></p>
+        <p><strong>Adresse:</strong> Dorfstraße 5A, 16837 Wallitz</p>
+    </div>
+
+    <div class="map">
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2423.8587655482463!2d12.568891915941272!3d53.112632079926886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8cb8b3e034819%3A0xc1b33a2e8319a13d!2sDorfstra%C3%9Fe%205A%2C%2016837%20Wallitz!5e0!3m2!1sde!2sde!4v1698439786547!5m2!1sde!2sde" 
+        width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+
+<section id="Mail" class="Mail">
+    <form action="https://form.taxi/s/c2h7br2q" method="POST">
+        <H2>Kontaktiere Mich</H2>
+        <p>Bitte trage deinen Namen ein.</p>
+        <input type="text" name="Name" placeholder="Trage doch hier bitte deinen Namen ein" required>
+        <p>Bitte trage hier deine Mail Adresse ein</p>
+        <input type="email" name="Email" placeholder="Hier ihre E-Mail Adresse" required>
+        <P>Und hier dein Anliegen</P>
+        <textarea name="Nachricht" placeholder="Was Betrifft dich..." required ></textarea>
+        <button>Send</button>
+        <input type="hidden" name="_next" value="http://yoursite.com/danke.html">
+      </form>
+    
+
+</section>
+
+    <footer>
+        <p>&copy; 2024 DroneVision. Alle Rechte vorbehalten.</p>
+    </footer>
+   <Script> document.addEventListener("DOMContentLoaded", () => {
+        const carousel = document.querySelector(".carousel-images");
+        const images = document.querySelectorAll(".carousel-images img");
+        const prevButton = document.querySelector(".carousel-control.prev");
+        const nextButton = document.querySelector(".carousel-control.next");
+    
+        let currentIndex = 0;
+    
+        function updateCarousel() {
+            const width = images[0].clientWidth;
+            carousel.style.transform = `translateX(-${currentIndex * width}px)`;
+        }
+    
+        nextButton.addEventListener("click", () => {
+            if (currentIndex < images.length - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // Zurück zum ersten Bild
+            }
+            updateCarousel();
+        });
+    
+        prevButton.addEventListener("click", () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = images.length - 1; // Zum letzten Bild springen
+            }
+            updateCarousel();
+        });
+    
+        window.addEventListener("resize", updateCarousel);
+        setInterval(() => {
+    nextButton.click(); // Automatisch den "Nächste" Button klicken
+}, 20000); // Alle 20 Sekunden
+    });
+
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        const calendarEl = document.getElementById("availability-calendar");
+
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: "dayGridMonth", // Monatliche Ansicht
+            headerToolbar: {
+                left: "prev,next today", // Navigation
+                center: "title", // Kalender-Titel
+                right: "dayGridMonth,timeGridWeek,timeGridDay" // Ansichtsmodi
+            },
+            events: [
+                {
+                    title: "Drohnenaufnahme Hochzeit",
+                    start: "2024-11-28",
+                    end: "2024-11-28",
+                },
+                {
+                    title: "Eventfilm Firmenfeier",
+                    start: "2024-12-05",
+                    end: "2024-12-05",
+                },
+                {
+                    title: "Landschaftsfotografie",
+                    start: "2024-12-10",
+                    end: "2024-12-12",
+                }
+            ],
+        });
+
+        calendar.render();
+    });
+
+
+
+     
+
+    
+</Script>
+</body>
+
+
+</html>
